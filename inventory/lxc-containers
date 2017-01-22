@@ -1,0 +1,16 @@
+[lxc-containers]
+dns
+es
+http
+ipv6
+mdr
+mysql
+pad
+vpn
+wbl
+
+[lxc-containers:vars]
+ansible_connection=ssh
+ansible_user=shtouff
+container_name={{ inventory_hostname }}
+ansible_host=lxc2.online.krm.io
