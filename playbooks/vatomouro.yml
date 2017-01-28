@@ -1,0 +1,5 @@
+---
+- name: playbook for vatomouro.h.krm.io
+  hosts: vatomouro.h.krm.io
+  roles:
+      - { role: vatomouro }

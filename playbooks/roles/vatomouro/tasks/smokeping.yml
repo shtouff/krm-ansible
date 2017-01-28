@@ -1,0 +1,38 @@
+---
+- name: install smokeping
+  apt:
+    default_release: stable
+    name: smokeping
+    state: latest
+
+- name: copy smokeping config
+  copy:
+    src: 'files/{{item}}'
+    dest: '{{item}}'
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - /etc/smokeping/config.d/Alerts
+    - /etc/smokeping/config.d/Database
+    - /etc/smokeping/config.d/General
+    - /etc/smokeping/config.d/pathnames
+    - /etc/smokeping/config.d/Presentation
+    - /etc/smokeping/config.d/Probes
+    - /etc/smokeping/config.d/Slaves
+    - /etc/smokeping/config.d/Targets
+  notify:
+    - restart smokeping
+
+- name: link the apache2.conf
+  file:
+    src: /etc/smokeping/apache2.conf
+    path: /etc/apache2/conf-available/smokeping.conf
+    state: link
+
+- name: enable the smokeping apache2 config
+  shell: a2enconf smokeping
+  args:
+    creates: /etc/apache2/conf-enabled/smokeping.conf
+  notify:
+    - reload apache2
