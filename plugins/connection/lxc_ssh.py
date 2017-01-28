@@ -52,14 +52,16 @@ class Connection(ConnectionBase):
         #print kwargs
         super(Connection, self).__init__(play_context, new_stdin, *args, **kwargs)
         self.host=self._play_context.remote_addr
+        self.become_method = self._play_context.become_method
+        #self.container_name = self._play_context.container_name
+
+        print(dir(self._play_context._attributes['vars']))
+        print(self._play_context.become_method)
 
     def _connect(self):
         ''' connect to the lxc; nothing to do here '''
-        display.vvv('XXX connect')
         super(Connection, self)._connect()
-        #self.container_name = self.ssh._play_context.remote_addr
-        self.container_name = self._play_context.ssh_extra_args # XXX
-        #self.container = None
+
 
     @staticmethod
     def _persistence_controls(command):
@@ -532,6 +534,8 @@ class Connection(ConnectionBase):
         #print( vm )
         #raise "blah"
         h = self.container_name
+        print('XXX: {}'.format(self.container_name))
+        print('XXX: {}'.format(self.become_method))
         lxc_cmd = 'lxc-attach --name %s -- /bin/sh -c %s'  \
                 % (pipes.quote(h),
                    pipes.quote(cmd))
