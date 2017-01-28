@@ -1,0 +1,15 @@
+---
+- name: install smokeping
+  apt:
+    default_release: stable
+    name: smokeping
+    state: latest
+
+# - name: copy unbound config
+#   copy:
+#     src: 'files/{{ item }}'
+#     dest: '{{ item }}'
+#   with_items:
+#     - /etc/unbound/unbound.conf.d/caching-recursive.conf
+#   notify:
+#     - restart unbound
