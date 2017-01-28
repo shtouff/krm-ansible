@@ -1,3 +1,4 @@
+# DEPLOYED WITH ANSIBLE, DO NOT MODIFY
 sendmail = /usr/sbin/sendmail
 imgcache = /var/cache/smokeping/images
 imgurl   = ../smokeping/images

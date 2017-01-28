@@ -5,6 +5,24 @@
     name: smokeping
     state: latest
 
+- name: copy smokeping config
+  copy:
+    src: 'files/{{item}}'
+    dest: '{{item}}'
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - /etc/smokeping/config.d/Alerts
+    - /etc/smokeping/config.d/Database
+    - /etc/smokeping/config.d/General
+    - /etc/smokeping/config.d/pathnames
+    - /etc/smokeping/config.d/Presentation
+    - /etc/smokeping/config.d/Probes
+    - /etc/smokeping/config.d/Slaves
+    - /etc/smokeping/config.d/Targets
+
+
 # - name: copy unbound config
 #   copy:
 #     src: 'files/{{ item }}'

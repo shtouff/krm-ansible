@@ -1,3 +1,4 @@
+# DEPLOYED WITH ANSIBLE, DO NOT MODIFY
 *** Targets ***
 
 probe = FPing

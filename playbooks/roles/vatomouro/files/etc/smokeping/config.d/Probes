@@ -1,6 +1,6 @@
+# DEPLOYED WITH ANSIBLE, DO NOT MODIFY
 *** Probes ***
 
 + FPing
 
 binary = /usr/bin/fping
-

@@ -1,3 +1,4 @@
+# DEPLOYED WITH ANSIBLE, DO NOT MODIFY
 *** Presentation ***
 
 template = /etc/smokeping/basepage.html
@@ -32,7 +33,7 @@ title = Top Median Roundtrip Time
 menu = by Median
 format = Median RTT %f seconds
 
-+ overview 
++ overview
 
 width = 600
 height = 50
@@ -54,4 +55,3 @@ unison_tolerance = 2
 #title = Host Owner
 #++ location
 #title = Location
-
