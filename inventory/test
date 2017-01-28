@@ -1,0 +1,11 @@
+[lxc2]
+lxc2.online.krm.io
+
+[containers]
+http
+
+[containers:vars]
+ansible_host=lxc2.online.krm.io
+ansible_container_name={{inventory_hostname}}
+ansible_connection=lxc_ssh
+ansible_become=false
