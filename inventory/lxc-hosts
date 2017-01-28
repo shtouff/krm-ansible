@@ -1,5 +1,0 @@
-[lxc-hosts]
-lxc2.online.krm.io
-
-[lxc-hosts:vars]
-ansible_user=shtouff
