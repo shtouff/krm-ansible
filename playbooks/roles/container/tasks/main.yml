@@ -1,0 +1,5 @@
+---
+# tasks file for container
+- name: test
+  debug:
+    msg: '{{ inventory_hostname }}'
