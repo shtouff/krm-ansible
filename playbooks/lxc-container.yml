@@ -1,0 +1,4 @@
+---
+- hosts: lxc-containers
+  roles:
+    - container
