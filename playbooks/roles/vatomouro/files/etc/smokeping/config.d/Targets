@@ -5,7 +5,7 @@ probe = FPing
 
 menu = Top
 title = Network Latency Grapher
-remark = Welcome to the SmokePing website of xxx Company. \
+remark = Welcome to the SmokePing website of karem. \
          Here you will learn all about the latency of our network.
 
 + Local
@@ -17,12 +17,35 @@ title = Local Network
 ++ LocalMachine
 
 menu = Local Machine
-title = This host
+title = le raspeberry pi
 host = localhost
 #alerts = someloss
 
-++ LocalRouter
+++ Router
 
-menu = Local Router
-title = Our mikrotik
+menu = Router
+title = le mikrotik
 host = router.h.krm.io
+
+++ Filer
+
+menu = Filer
+title = le NAS (pookram)
+host = pookram.h.krm.io
+
+++ PS4
+
+menu = PS4
+title = la Playstation
+host = ps4.h.krm.io
+
++ Internet
+
+menu = Internet
+title = Les Internets
+
+++ Free
+
+menu = Free
+title = free.fr
+host = www.free.fr

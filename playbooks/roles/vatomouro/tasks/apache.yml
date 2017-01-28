@@ -5,11 +5,16 @@
     name: apache2
     state: latest
 
-# - name: copy unbound config
-#   copy:
-#     src: 'files/{{ item }}'
-#     dest: '{{ item }}'
-#   with_items:
-#     - /etc/unbound/unbound.conf.d/caching-recursive.conf
-#   notify:
-#     - restart unbound
+- name: enable cgid mod
+  shell: a2enmode cgid
+  args:
+    creates: /etc/apache2/mods-enabled/cgid.load
+  notify:
+    - reload apache2
+
+- name: enable cgi-bin conf
+  shell: a2enconf serve-cgi-bin
+  args:
+    creates: /etc/apache2/conf-enabled/serve-cgi-bin.conf
+  notify:
+    - reload apache2

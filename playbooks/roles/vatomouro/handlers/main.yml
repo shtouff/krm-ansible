@@ -1,5 +1,15 @@
 ---
 - name: restart unbound
   service:
-      name: unbound
-      state: restarted
+    name: unbound
+    state: restarted
+
+- name: reload apache2
+  service:
+    name: apache2
+    state: reloaded
+
+- name: restart smokeping
+  service:
+    name: smokeping
+    state: restarted

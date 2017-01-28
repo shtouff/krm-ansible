@@ -1,5 +1,5 @@
 # DEPLOYED WITH ANSIBLE, DO NOT MODIFY
-sendmail = /usr/sbin/sendmail
+sendmail = /bin/true
 imgcache = /var/cache/smokeping/images
 imgurl   = ../smokeping/images
 datadir  = /var/lib/smokeping

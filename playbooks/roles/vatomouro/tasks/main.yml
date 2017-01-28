@@ -3,6 +3,17 @@
   apt:
     update_cache: yes
     cache_valid_time: 86400
+    
+- name: various packages
+  apt:
+    name: '{{item}}'
+    state: latest
+    default_release: stable
+  with_items:
+    - htop
+    - dfc
+    - tcpdump
+
 - include: unbound.yml
 - include: apache.yml
 - include: smokeping.yml
