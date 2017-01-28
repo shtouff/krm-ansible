@@ -1,0 +1,9 @@
+---
+- name: machin
+  hosts: containers
+  vars:
+    container_name: http
+  tasks:
+    - name: test
+      debug:
+        msg: toto
