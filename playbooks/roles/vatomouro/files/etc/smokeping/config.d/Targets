@@ -39,13 +39,60 @@ menu = PS4
 title = la Playstation
 host = ps4.h.krm.io
 
+++ Atlas
+
+menu = Atlas
+title = la sonde RIPE Atlas
+host = atlas.h.krm.io
+
++ VPN
+
+menu = VPN
+title = connexions VPN
+
+++ Julien
+
+menu = Julien
+title = Bonsoir Messire !!!
+host = 172.16.4.6
+
 + Internet
 
 menu = Internet
 title = Les Internets
+
+++ Blablacar
+
+menu = Blablacar
+title = www.blablacar.fr
+host = www.blablacar.fr
+
+++ Online
+
+menu = Online
+title = lxc2.online.krm.io
+host = lxc2.online.krm.io
 
 ++ Free
 
 menu = Free
 title = free.fr
 host = www.free.fr
+
+++ Google
+
+menu = Google
+title = google.fr
+host = www.google.fr
+
+++ SFR
+
+menu = SFR
+title = sfr.fr
+host = www.sfr.fr
+
+++ Orange
+
+menu = Orange
+title = orange.fr
+host = www.orange.fr
