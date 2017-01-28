@@ -19,3 +19,9 @@ menu = Local Machine
 title = This host
 host = localhost
 #alerts = someloss
+
+++ LocalRouter
+
+menu = Local Router
+title = Our mikrotik
+host = router.h.krm.io
