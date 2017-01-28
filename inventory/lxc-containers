@@ -1,4 +1,4 @@
-[containers]
+[lxc-containers]
 dns
 es
 http
@@ -10,7 +10,7 @@ toolbox
 vpn
 wbl
 
-[containers:vars]
+[lxc-containers:vars]
 ansible_host=lxc2.online.krm.io
 ansible_connection=lxc_ssh
 ansible_ssh_extra_args={{ inventory_hostname }}
